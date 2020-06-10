@@ -25,6 +25,9 @@ function consonantChange(sentence) {
   else if (checkIfVowel(sentence.slice(2,3))) {
     return sentence.slice(2) + sentence.slice(0, 2) + "ay";
   }
+  else if (checkIfVowel(sentence.slice(3,4))) {
+    return sentence.slice(3) + sentence.slice(0,3) + "ay";
+  }
   else {
     return sentence;
   }
