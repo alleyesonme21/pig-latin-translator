@@ -19,14 +19,31 @@ function checkIfVowel(letter) {
 }
 
 function consonantChange(sentence) {
-  if(checkIfVowel(sentence.slice(1,2))) {
-    return sentence.slice(1) + sentence.slice(0,1) + "ay";
+  let sentenceArray = sentence.split(''); //if sentence is "song" expected output should be ["s", "o","n", "g"]
+  console.log(sentenceArray);
+  if(checkIfVowel(sentenceArray[1])) { //if second letter is a vowel do this one
+    if(sentenceArray[1] === "u" && sentenceArray[0] === "q") {
+      return sentenceArray.slice(2).join('') + sentenceArray.slice(0,2).join('') + "ay";
+    }
+    else {
+      return sentenceArray.slice(1).join('') + sentenceArray.slice(0,1).join('') + "ay";
+    }
   }
-  else if (checkIfVowel(sentence.slice(2,3))) {
-    return sentence.slice(2) + sentence.slice(0, 2) + "ay";
+  else if (checkIfVowel(sentenceArray[2])) { // if third letter is a vowel do this one
+    if(sentenceArray[2] === "u" && sentenceArray[1] === "q") {
+      return sentenceArray.slice(3).join('') + sentenceArray.slice(0,3).join('') + "ay";
+    }
+    else {
+      return sentenceArray.slice(2).join('') + sentenceArray.slice(0, 2).join('') + "ay";
+    }
   }
-  else if (checkIfVowel(sentence.slice(3,4))) {
-    return sentence.slice(3) + sentence.slice(0,3) + "ay";
+  else if (checkIfVowel(sentenceArray[3])) { // squeal= ealsquay
+    if(sentenceArray[3] === "u" && sentenceArray[2] === "q"){
+      return sentenceArray.slice(4).join('') + sentenceArray.slice(0,4).join('') + "ay";
+    }
+    else {
+      return sentenceArray.slice(3).join('') + sentenceArray.slice(0,3).join('') + "ay";
+    }
   }
   else {
     return sentence;

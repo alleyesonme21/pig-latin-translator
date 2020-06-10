@@ -2,7 +2,7 @@
 
 #### _JavaScript/jQuery Exercise for Epicodus, 2020.06.10_
 
-#### By **Sara Kane,Johnny Duverseau**
+#### By **Sara Kane, Johnny Duverseau**
 
 ## Description
 This is an exercise for [Epicodus](https://www.epicodus.com/) to practice looping and behavior driven development. 
