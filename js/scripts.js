@@ -23,8 +23,8 @@ function toPigLatin(sentence) {
   if (checkIfFirstLetterIsVowel(sentence)) {
     return sentence + "way";
   }
-  else {
-    return sentence + "ay";
+  else { 
+    return sentence.slice(1) + sentence.slice(0,1) + "ay";
   }
   
 }
